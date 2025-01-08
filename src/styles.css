@@ -1,0 +1,36 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    padding:0.1em;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+.sideNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}   
+
+
+.sideNavTopMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+ul:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+.sideNavBottom{
+    display: flex;
+    align-content: flex-end;
+}
