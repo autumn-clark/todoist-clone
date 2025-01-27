@@ -1,0 +1,8 @@
+.buttons{
+    opacity: 0;
+    transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+.list-item:hover .buttons{
+    opacity: 1;
+}

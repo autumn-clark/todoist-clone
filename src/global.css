@@ -1,109 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
     font-family: 'Lucida Sans', sans-serif;
     font-size: small;
     padding: 0.1em;
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
   }
   
-  button,
-  ul,
-  .bell {
-    background-color: transparent;
+  
+  button{
     border: none;
     padding: 5px;
     display: flex;
     align-items: center;
-    margin: 0;
-    cursor: pointer;
   }
-  
-  button:hover,
-  .bell:hover,
-  li:hover,
-  .sideNav-abs:hover {
-    background-color: rgb(238, 238, 238);
+
+  button:hover{
+    background-color: rgb(223, 223, 223);
     border-radius: 5px;
+    width: 100%;
   }
   
   i {
     color: gray;
   }
   
-  li {}
-  
   ul {
     flex-direction: column;
     align-items: stretch;
   }
-  
-  .active {
-    color: rgb(209, 51, 51);
-    background-color: rgb(248, 226, 226);
-    border-radius: 5px;
-  }
-  
-  .active:hover {
-    background-color: rgb(248, 226, 226);
-    border-radius: 5px;
-  }
-  
-  .active i {
-    color: rgb(209, 51, 51);
-  }
-  
-  .bell {
-    margin-right: 40px;
-  }
-  
-  .profileBtn {}
-  
-  .profileBtn p {
-    margin: 0 5px 0 0;
-    padding: 5px 10px;
-    background-color: rgb(138, 131, 150);
-    border-radius: 50%;
-    color: white;
-  }
 
-  .projects, .sideNavMenu li{
-    list-style-type: none;
-  }
-  
-  .projectsBtn {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .projectsBtn span{
-    display: flex;
-  }
-  
-  .projectsBtn i {
-    opacity: 0;
-  }
-  
-  .projectsBtn:hover i {
-    opacity: 0.6;
-  }
-  
-  .projectsBtn i:hover {
-    opacity: 1;
-  }
-  
-  .sideNavBottom {
-    position: absolute;
-    bottom: 20px;
+  .closed{
     width: 100%;
+    transition: left;
   }
-  
-  .sideNavBottom ul {
-    list-style-type: none;
-    display: flex;
+
+  .open{
+    left: 200px;
+    width: calc(100% - 200px);
+    transition: right;
   }
-  
-  .sideNavBottom li {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+
+  .page{
+    margin: 60px 0px 60px 0px;
+    max-width: 1000px;
   }
   
   .sideNav {
@@ -113,42 +61,36 @@
     position: fixed;
     left: -200px;
     height: 100%;
-    transition: left 0.3s ease;
+    transition: left;
   }
   
   .sideNav.open {
     left: 0;
   }
   
-  .sideNav-abs {
+  .sideNavBtn {
     position: absolute;
     left: 160px;
-    transition: left 0.3s ease;
+    transition: left;
     z-index: 1;
     margin-top: 2.5px;
+    width: auto;
+  }
+
+  .sideNavBtn:hover{
+    width: auto;
   }
   
-  .sideNav-abs i {
+  .sideNavBtn i {
     font-size: 25px;
   }
 
-  .sideNav-abs.openBtn{
+  .sideNavBtn.openBtn{
     left: 0px;
   }
   
   .sideNavMenu button {
     flex-grow: 1;
     width: 100%;
-  }
-  
-  .sideNavTop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .red {
-    color: rgb(209, 51, 51);
   }
   
